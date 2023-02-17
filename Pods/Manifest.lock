@@ -1,0 +1,16 @@
+PODS:
+  - NeumorphismKit (1.1.0)
+
+DEPENDENCIES:
+  - NeumorphismKit (~> 1.0)
+
+SPEC REPOS:
+  trunk:
+    - NeumorphismKit
+
+SPEC CHECKSUMS:
+  NeumorphismKit: c5d69c7260b5c27d90106aded6f9bd4a1eab458d
+
+PODFILE CHECKSUM: ff0501b451d60a81fe8a71fa5236c4fc09eee7ab
+
+COCOAPODS: 1.11.3
