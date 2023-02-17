@@ -12,6 +12,19 @@ import NeumorphismKit
 class ViewController: UIViewController {
 
     private var isFinishedTypingNumber: Bool = true
+    
+    private var displayValue: Double  {
+        get {
+            guard let number = Double(displayLabel.text!) else {
+                fatalError("Error reading from the displayLabel")
+            }
+            return number
+        }
+        set {
+            displayLabel.text = String(newValue)
+        }
+    }
+    
     @IBOutlet weak var displayLabel: UILabel!
     
     override func viewDidLoad() {
@@ -23,19 +36,15 @@ class ViewController: UIViewController {
 
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         isFinishedTypingNumber = true
-        guard let number = Double(displayLabel.text!) else {
-            fatalError("Cannot convert display label text to Double")
-        }
         
         if let calcMethod = sender.titleLabel?.text {
             switch calcMethod {
             case "+/-":
-                displayLabel.text = String(number * -1)
+                displayValue *= -1
             case "AC":
-                displayLabel.text = String(0)
+                displayValue =  0
             case "%":
-                displayLabel.text = String(number / 100)
-                
+                displayValue /= 100
             default:
                 print("Error")
             }
@@ -58,12 +67,8 @@ class ViewController: UIViewController {
             } else {
                 // or the "." button is pressed
                 if numValue == "." {
-                    // convert an optional Double to a Double
-                    guard let currentDisplayValue = Double(displayLabel.text!) else {
-                        fatalError("Cannot convert display label text to a Double")
-                    }
                     // checking if the displayed number is Int or a Double
-                    let isInt = floor(currentDisplayValue) == Double(currentDisplayValue)
+                    let isInt = floor(displayValue) == Double(displayValue)
                     // if the typed in number is not an int return AKA if the "." was already pressed before
                     if !isInt {
                         return
