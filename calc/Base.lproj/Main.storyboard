@@ -40,7 +40,7 @@
                                                                 <color key="value" systemColor="systemCyanColor"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="33"/>
+                                                                <real key="value" value="32"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
@@ -491,7 +491,7 @@
                                                                         <state key="normal" title="Button">
                                                                             <color key="titleColor" systemColor="labelColor"/>
                                                                         </state>
-                                                                        <buttonConfiguration key="configuration" style="gray" title="," cornerStyle="small">
+                                                                        <buttonConfiguration key="configuration" style="gray" title="." cornerStyle="small">
                                                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
                                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                         </buttonConfiguration>
@@ -561,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-34" y="-4"/>
         </scene>
     </scenes>
     <designables>
