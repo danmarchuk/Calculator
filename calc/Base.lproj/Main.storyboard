@@ -1,24 +1,576 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-Ac-hmG">
+                                <rect key="frame" x="20" y="60" width="353" height="752"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CGY-06-hSD">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="752"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3G-8K-ItC">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="242"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm8-lb-5Us" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                        <rect key="frame" x="0.0" y="-8" width="353" height="250"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="250" id="ofS-wF-lGd"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                        </state>
+                                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="small"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                <color key="value" systemColor="systemCyanColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="33"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qt-kb-6Id">
+                                                        <rect key="frame" x="0.0" y="162" width="343" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="bZf-cm-xLR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="cm8-lb-5Us" firstAttribute="top" secondItem="i3G-8K-ItC" secondAttribute="top" constant="-8" id="1oe-BG-0M2"/>
+                                                    <constraint firstItem="cm8-lb-5Us" firstAttribute="leading" secondItem="i3G-8K-ItC" secondAttribute="leading" id="DK0-nX-kwd"/>
+                                                    <constraint firstItem="cm8-lb-5Us" firstAttribute="centerX" secondItem="i3G-8K-ItC" secondAttribute="centerX" id="JvM-jz-vJj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8qt-kb-6Id" secondAttribute="trailing" constant="10" id="dnj-K4-3zg"/>
+                                                    <constraint firstItem="8qt-kb-6Id" firstAttribute="leading" secondItem="i3G-8K-ItC" secondAttribute="leading" id="qZ2-OF-Hiz"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8qt-kb-6Id" secondAttribute="bottom" id="umW-J3-5fZ"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u7g-yb-En2">
+                                                <rect key="frame" x="0.0" y="312" width="353" height="440"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NTi-Hi-WDf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="80"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFj-Js-uqq" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="AC" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBb-dl-m88" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="90.666666666666686" y="0.0" width="81" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="+/-" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPZ-Fl-wqx" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="181.66666666666666" y="0.0" width="80.666666666666657" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="%" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ob-Ia-qhu" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="272.33333333333331" y="0.0" width="80.666666666666686" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="÷" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="2p7-AL-bDg"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2x7-Pu-BlT">
+                                                        <rect key="frame" x="0.0" y="90" width="353" height="80"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxT-p4-jsb" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="7" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhy-79-FCm" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="90.666666666666686" y="0.0" width="81" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="8" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w90-bM-CR2" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="181.66666666666666" y="0.0" width="80.666666666666657" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="9" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVy-Ke-GMK" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="272.33333333333331" y="0.0" width="80.666666666666686" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="X" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="lcY-aO-22g"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6oz-za-wyL">
+                                                        <rect key="frame" x="0.0" y="180" width="353" height="80"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kB-Wn-O9M" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="4" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRc-C4-Kao" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="90.666666666666686" y="0.0" width="81" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="5" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfX-jK-FDZ" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="181.66666666666666" y="0.0" width="80.666666666666657" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="6" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a33-dU-p3W" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="272.33333333333331" y="0.0" width="80.666666666666686" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="-" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="TZ7-Xh-bOr"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hKy-Kc-Yqh">
+                                                        <rect key="frame" x="0.0" y="270" width="353" height="80"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AL9-gM-jon" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="1" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-hK-MBg" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="90.666666666666686" y="0.0" width="81" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="2" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQO-sJ-nH9" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="181.66666666666666" y="0.0" width="80.666666666666657" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="3" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGL-6T-iyi" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                <rect key="frame" x="272.33333333333331" y="0.0" width="80.666666666666686" height="80"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="gray" title="+" cornerStyle="small">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                        <color key="value" systemColor="systemCyanColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="f97-Vm-wyG"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QHO-Cg-r4v">
+                                                        <rect key="frame" x="0.0" y="360" width="353" height="80"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Esg-Xg-cmO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="80"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLx-vd-Xhd" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="80"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Button">
+                                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                                        </state>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="0" cornerStyle="small">
+                                                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                                <color key="value" systemColor="systemCyanColor"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="8"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oIa-a1-kj1">
+                                                                <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="80"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFP-b1-Oet" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="80"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Button">
+                                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                                        </state>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="," cornerStyle="small">
+                                                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                                <color key="value" systemColor="systemCyanColor"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="8"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJU-Gj-zhs" customClass="NeumorphismButton" customModule="NeumorphismKit">
+                                                                        <rect key="frame" x="88.000000000000028" y="0.0" width="83.333333333333343" height="80"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Button">
+                                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                                        </state>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="=" cornerStyle="small">
+                                                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="baseColor">
+                                                                                <color key="value" systemColor="systemCyanColor"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="8"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="SP1-Q1-qFh"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="u7g-yb-En2" firstAttribute="top" secondItem="i3G-8K-ItC" secondAttribute="bottom" constant="70" id="46H-4c-vvD"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rNa-Ac-hmG" secondAttribute="bottom" constant="40" id="O8Z-AC-AdW"/>
+                            <constraint firstItem="rNa-Ac-hmG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="rSB-MA-zI1"/>
+                            <constraint firstAttribute="trailing" secondItem="rNa-Ac-hmG" secondAttribute="trailing" constant="20" id="vMa-Xt-gtN"/>
+                            <constraint firstItem="rNa-Ac-hmG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="z1J-jK-HZt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1fB-hK-MBg">
+            <size key="intrinsicContentSize" width="39" height="44"/>
+        </designable>
+        <designable name="6kB-Wn-O9M">
+            <size key="intrinsicContentSize" width="40" height="44"/>
+        </designable>
+        <designable name="6ob-Ia-qhu">
+            <size key="intrinsicContentSize" width="40" height="44"/>
+        </designable>
+        <designable name="AL9-gM-jon">
+            <size key="intrinsicContentSize" width="35.666666666666664" height="44"/>
+        </designable>
+        <designable name="FVy-Ke-GMK">
+            <size key="intrinsicContentSize" width="40.666666666666664" height="44"/>
+        </designable>
+        <designable name="FxT-p4-jsb">
+            <size key="intrinsicContentSize" width="38.333333333333336" height="44"/>
+        </designable>
+        <designable name="HQO-sJ-nH9">
+            <size key="intrinsicContentSize" width="39.666666666666664" height="44"/>
+        </designable>
+        <designable name="IfX-jK-FDZ">
+            <size key="intrinsicContentSize" width="40" height="44"/>
+        </designable>
+        <designable name="OLx-vd-Xhd">
+            <size key="intrinsicContentSize" width="40" height="44"/>
+        </designable>
+        <designable name="PJU-Gj-zhs">
+            <size key="intrinsicContentSize" width="40" height="44"/>
+        </designable>
+        <designable name="YBb-dl-m88">
+            <size key="intrinsicContentSize" width="58.333333333333336" height="44"/>
+        </designable>
+        <designable name="a33-dU-p3W">
+            <size key="intrinsicContentSize" width="35.333333333333336" height="44"/>
+        </designable>
+        <designable name="cm8-lb-5Us">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+        <designable name="kRc-C4-Kao">
+            <size key="intrinsicContentSize" width="39.333333333333336" height="44"/>
+        </designable>
+        <designable name="lhy-79-FCm">
+            <size key="intrinsicContentSize" width="40" height="44"/>
+        </designable>
+        <designable name="oGL-6T-iyi">
+            <size key="intrinsicContentSize" width="40" height="44"/>
+        </designable>
+        <designable name="rFP-b1-Oet">
+            <size key="intrinsicContentSize" width="30.333333333333332" height="44"/>
+        </designable>
+        <designable name="sPZ-Fl-wqx">
+            <size key="intrinsicContentSize" width="45.666666666666664" height="44"/>
+        </designable>
+        <designable name="uFj-Js-uqq">
+            <size key="intrinsicContentSize" width="57.666666666666664" height="44"/>
+        </designable>
+        <designable name="w90-bM-CR2">
+            <size key="intrinsicContentSize" width="40" height="44"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
