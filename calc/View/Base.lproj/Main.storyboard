@@ -239,7 +239,7 @@
                                                                 <state key="normal" title="Button">
                                                                     <color key="titleColor" systemColor="labelColor"/>
                                                                 </state>
-                                                                <buttonConfiguration key="configuration" style="gray" title="X" cornerStyle="small">
+                                                                <buttonConfiguration key="configuration" style="gray" title="×" cornerStyle="small">
                                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
                                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                 </buttonConfiguration>
@@ -578,7 +578,7 @@
             <size key="intrinsicContentSize" width="35.666666666666664" height="44"/>
         </designable>
         <designable name="FVy-Ke-GMK">
-            <size key="intrinsicContentSize" width="40.666666666666664" height="44"/>
+            <size key="intrinsicContentSize" width="40" height="44"/>
         </designable>
         <designable name="FxT-p4-jsb">
             <size key="intrinsicContentSize" width="38.333333333333336" height="44"/>
